@@ -184,3 +184,19 @@ BEGIN
     WHERE job_id = (SELECT job_id FROM Contracts WHERE contract_id = p_contract_id);
 END;
 $$;
+
+-- ========================================================
+-- 8. Seed Data
+-- ========================================================
+INSERT INTO Categories (name) VALUES 
+('Web Development'), 
+('Mobile Development'), 
+('Design & Creative'), 
+('Writing & Translation'),
+('Admin Support'),
+('Customer Service');
+
+INSERT INTO Skills (name) VALUES 
+('React'), ('Node.js'), ('PostgreSQL'), ('Python'), 
+('Figma'), ('Technical Writing'), ('Customer Success'), 
+('Direct Sales'), ('Project Management');

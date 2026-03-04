@@ -80,3 +80,13 @@ exports.getJobById = async (req, res) => {
         res.status(500).json({ error: 'Failed to fetch job' });
     }
 };
+
+exports.getAllCategories = async (req, res) => {
+    try {
+        const result = await db.query('SELECT * FROM Categories ORDER BY name ASC');
+        res.status(200).json(result.rows);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to fetch categories' });
+    }
+};

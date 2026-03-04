@@ -5,6 +5,7 @@ const { authenticateToken, authorizeRole } = require('../middleware/auth');
 
 router.post('/', authenticateToken, authorizeRole('client'), jobController.createJob);
 router.get('/', jobController.getAllJobs);
+router.get('/categories', jobController.getAllCategories);
 router.get('/:id', jobController.getJobById);
 
 module.exports = router;
