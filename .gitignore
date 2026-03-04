@@ -1,0 +1,31 @@
+# Dependency directories
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Build outputs
+dist/
+frontend/dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# Docker logs
+*.log
+docker_out.txt
+build_errors.txt
+build_errors_v5.txt
+out.txt
+local_build.txt
+build_output.txt
